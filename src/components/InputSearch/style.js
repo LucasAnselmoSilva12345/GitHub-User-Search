@@ -16,6 +16,15 @@ export const Container = styled.div`
   }
 `;
 
+export const Form = styled.form`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+`;
+
 export const Input = styled.input`
   background-color: #fff;
   border: 1px solid #ccc;
