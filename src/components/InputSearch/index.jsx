@@ -1,25 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { CardProfileGitHub } from 'lulib-ui';
 
-import { Container, Form, Input, Button } from './style.js';
+import { Container, Input, Button } from './style.js';
 
 export function InputSearch() {
-  const [username, setUsername] = React.useState('');
+  const [githubUsername, setGitHubUsername] = useState('');
 
-  function handleSubmit(event) {
+  function handleSearchGitHubUser(event) {
     event.preventDefault();
+
+    axios
+      .get(`https://api.github.com/users/${githubUsername}`)
+      .then((response) => {
+        return response.data;
+      });
   }
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
+      <form>
         <Input
           type="text"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
+          value={githubUsername}
+          onChange={(event) => setGitHubUsername(event.target.value)}
           placeholder="Digite o username do GitHub"
         />
         <Button>Search</Button>
-      </Form>
+      </form>
+
+      {githubUsername.length === 0 ? (
+        <p>Nenhum usuário pesquisado</p>
+      ) : (
+        <CardProfileGitHub username={githubUsername} />
+      )}
     </Container>
   );
 }
