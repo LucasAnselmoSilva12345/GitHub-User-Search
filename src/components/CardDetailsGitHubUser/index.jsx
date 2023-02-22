@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonBlank } from 'lulib-ui';
 
 import {
   CardDetailsGitHubUserContainer,
@@ -7,39 +8,29 @@ import {
   CardDetailsGitHubUserDetails,
   CardDetailsGitHubUserName,
   CardDetailsGitHubUserBio,
-  CardDetailsGitHubUserData,
-  CardDetailsGitHubUserInfo,
+  CardDetailsGitHubUserCity,
 } from './style.js';
 
-export function CardDetailsGitHubUser() {
+export function CardDetailsGitHubUser({
+  avatar_url,
+  name,
+  bio,
+  location,
+  url,
+}) {
   return (
     <CardDetailsGitHubUserContainer>
       <div>
-        <CardDetailsGitHubUserImage
-          src="https://avatars.githubusercontent.com/u/1?v=4"
-          alt="avatar"
-        />
+        <CardDetailsGitHubUserImage src={avatar_url} alt={name} />
       </div>
       <CardDetailsGitHubUserDetailsStructure>
         <CardDetailsGitHubUserDetails>
-          <CardDetailsGitHubUserName>Lucas Anselmo</CardDetailsGitHubUserName>
-          <p>Date</p>
+          <CardDetailsGitHubUserName>{name}</CardDetailsGitHubUserName>
+          <CardDetailsGitHubUserBio>{bio}</CardDetailsGitHubUserBio>
+          <CardDetailsGitHubUserCity>{location}</CardDetailsGitHubUserCity>
         </CardDetailsGitHubUserDetails>
 
-        <CardDetailsGitHubUserBio>Messagem</CardDetailsGitHubUserBio>
-
-        <CardDetailsGitHubUserData>
-          <p>Reactions</p>
-          <p>Comments</p>
-          <p>Shared</p>
-        </CardDetailsGitHubUserData>
-
-        <CardDetailsGitHubUserInfo>
-          <span>City</span>
-          <span>City</span>
-          <span>City</span>
-          <span>City</span>
-        </CardDetailsGitHubUserInfo>
+        <ButtonBlank link={url} nameButton="Follow" />
       </CardDetailsGitHubUserDetailsStructure>
     </CardDetailsGitHubUserContainer>
   );
