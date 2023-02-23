@@ -45,7 +45,7 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #334155;
+    border-color: ${({ theme }) => theme.focusInput};
   }
 
   &:focus::-webkit-input-placeholder {
@@ -59,7 +59,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.bgButtonSearch};
-  border: 1px solid #1e293b;
+  border: 1px solid ${({ theme }) => theme.bgButtonBorder};
   color: #ffffff;
   border-radius: 4px;
   padding: 0.5rem;
@@ -68,7 +68,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #4b5563;
+    filter: opacity(75%);
   }
 `;
 
