@@ -31,8 +31,8 @@ export const HeaderSearch = styled.div`
 `;
 
 export const Input = styled.input`
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: ${({ theme }) => theme.bgInput};
+  border: 1px solid ${({ theme }) => theme.borderColorInput};
   border-radius: 4px;
   padding: 0.5rem;
   width: 100%;
@@ -40,7 +40,7 @@ export const Input = styled.input`
   font-size: 1rem;
 
   &::-webkit-input-placeholder {
-    color: #a3a3a3;
+    color: ${({ theme }) => theme.colorPlaceholder};
   }
 
   &:focus {
@@ -58,7 +58,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #334155;
+  background-color: ${({ theme }) => theme.bgButtonSearch};
   border: 1px solid #1e293b;
   color: #ffffff;
   border-radius: 4px;
@@ -76,5 +76,5 @@ export const WithoutResults = styled.p`
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  color: #333;
+  color: ${({ theme }) => theme.colorWithoutUserSearch};
 `;
