@@ -1,13 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-  html{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
@@ -36,30 +35,28 @@ export const GlobalStyles = createGlobalStyle`
 export const lightTheme = {
   body: '#fff',
   text: '#363537',
-
   bgHeader: '#fff',
   colorHeader: '#1d4ed8',
-
   bgInput: '#fff',
+  focusInput: '#334155',
   borderColorInput: '#ccc',
   colorPlaceholder: '#a3a3a3',
   bgButtonSearch: '#334155',
-
+  bgButtonBorder: '#1e293b',
   colorWithoutUserSearch: '#78716C',
 };
 
 export const darkTheme = {
   body: '#171717',
   text: '#fff',
-
   bgHeader: '#171717',
   colorHeader: '#FACC15',
   borderBottomColor: '#FEF9C3',
-
   bgInput: '#292524',
+  focusInput: '#2563EB',
   borderColorInput: '#44403C',
-  colorPlaceholder: '#E7E5E4',
+  colorPlaceholder: '#fff',
   bgButtonSearch: '#404040',
-
+  bgButtonBorder: '#44403C',
   colorWithoutUserSearch: '#F5F5F4',
 };
