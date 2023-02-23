@@ -44,6 +44,10 @@ export const lightTheme = {
   bgButtonSearch: '#334155',
   bgButtonBorder: '#1e293b',
   colorWithoutUserSearch: '#78716C',
+
+  colorUsername: '#1e293b',
+  colorBio: '#333',
+  colorCity: '#333',
 };
 
 export const darkTheme = {
@@ -59,4 +63,8 @@ export const darkTheme = {
   bgButtonSearch: '#404040',
   bgButtonBorder: '#44403C',
   colorWithoutUserSearch: '#F5F5F4',
+
+  colorUsername: '#E7E5E4',
+  colorBio: '#D6D3D1',
+  colorCity: '#DDD6FE',
 };
