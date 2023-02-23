@@ -35,22 +35,22 @@ export const CardDetailsGitHubUserDetails = styled.div`
 
 export const CardDetailsGitHubUserName = styled.h1`
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
-  color: #1e293b;
+  color: ${({ theme }) => theme.colorUsername};
 `;
 
 export const CardDetailsGitHubUserBio = styled.p`
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
-  color: #333;
+  color: ${({ theme }) => theme.colorBio};
 `;
 
 export const CardDetailsGitHubUserCity = styled.span`
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  color: #333;
+  color: ${({ theme }) => theme.colorCity};
 `;

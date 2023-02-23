@@ -31,21 +31,22 @@ export const HeaderSearch = styled.div`
 `;
 
 export const Input = styled.input`
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: ${({ theme }) => theme.bgInput};
+  border: 1px solid ${({ theme }) => theme.borderColorInput};
   border-radius: 4px;
   padding: 0.5rem;
   width: 100%;
   max-width: 400px;
   font-size: 1rem;
+  transition: all 0.5s linear;
 
   &::-webkit-input-placeholder {
-    color: #a3a3a3;
+    color: ${({ theme }) => theme.colorPlaceholder};
   }
 
   &:focus {
     outline: none;
-    border-color: #334155;
+    border-color: ${({ theme }) => theme.focusInput};
   }
 
   &:focus::-webkit-input-placeholder {
@@ -58,17 +59,18 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #334155;
-  border: 1px solid #1e293b;
+  background-color: ${({ theme }) => theme.bgButtonSearch};
+  border: 1px solid ${({ theme }) => theme.bgButtonBorder};
   color: #ffffff;
   border-radius: 4px;
   padding: 0.5rem;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  transition: all 0.5s linear;
 
   &:hover {
-    background-color: #4b5563;
+    filter: opacity(75%);
   }
 `;
 
@@ -76,5 +78,5 @@ export const WithoutResults = styled.p`
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  color: #333;
+  color: ${({ theme }) => theme.colorWithoutUserSearch};
 `;
