@@ -6,13 +6,13 @@ export const Container = styled.header`
   justify-content: space-between;
   padding: 0 30px;
   height: 64px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background: ${({ theme }) => theme.bgHeader};
+  border-bottom: 1px solid ${({ theme }) => theme.borderBottomColor};
 `;
 
 export const Profile = styled.h1`
   font-size: 2rem;
-  color: #1d4ed8;
+  color: ${({ theme }) => theme.colorHeader};
 `;
 
 export const SwitchThemeContainer = styled.div`
@@ -20,9 +20,4 @@ export const SwitchThemeContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-`;
-
-export const SwitchThemeLabel = styled.span`
-  font-size: 1.2rem;
-  color: #3b82f6;
 `;
