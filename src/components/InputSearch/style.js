@@ -38,6 +38,7 @@ export const Input = styled.input`
   width: 100%;
   max-width: 400px;
   font-size: 1rem;
+  transition: all 0.5s linear;
 
   &::-webkit-input-placeholder {
     color: ${({ theme }) => theme.colorPlaceholder};
@@ -66,6 +67,7 @@ export const Button = styled.button`
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  transition: all 0.5s linear;
 
   &:hover {
     filter: opacity(75%);

@@ -8,6 +8,7 @@ export const Container = styled.header`
   height: 64px;
   background: ${({ theme }) => theme.bgHeader};
   border-bottom: 1px solid ${({ theme }) => theme.borderBottomColor};
+  transition: all 0.5s linear;
 `;
 
 export const Profile = styled.h1`
