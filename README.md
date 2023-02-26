@@ -1,6 +1,6 @@
 # GitHub User Search
 
-[Version this Readme in english]()
+[Version this Readme in english](https://github.com/LucasAnselmoSilva12345/GitHub-User-Search/blob/main/README-en.md)
 
 ## Sobre esse projeto
 
