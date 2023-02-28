@@ -27,7 +27,7 @@ export function InputSearch() {
         setGitHubBio(response.data.bio);
         setGitHubAvatarURL(response.data.avatar_url);
         setGitHubLocation(response.data.location);
-        setGitHubURL(response.data.url);
+        setGitHubURL(response.data.html_url);
       });
   }
 
