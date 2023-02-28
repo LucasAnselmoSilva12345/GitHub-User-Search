@@ -4,7 +4,7 @@
 
 ## About this project
 
-Web application responsible for allowing users to search on [GitHub](https://github.com/).
+Web application responsible for allowing users to search about users present on [GitHub](https://github.com/).
 
 You can search for a specific user and get information about that searched user.
 
