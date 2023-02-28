@@ -25,7 +25,7 @@ In this project, the following technologies were used:
 
 ## Deploy
 
-- [https://poetic-cucurucho-be37a9.netlify.app/](https://poetic-cucurucho-be37a9.netlify.app/)
+- [https://gitdevfindersearch.netlify.app/](https://gitdevfindersearch.netlify.app/)
 
 ## How to execute this project
 
