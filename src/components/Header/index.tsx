@@ -1,9 +1,12 @@
 import { Moon, Sun } from 'phosphor-react';
-import React from 'react';
+import { Container, Profile, SwitchThemeContainer } from './style';
 
-import { Container, Profile, SwitchThemeContainer } from './style.js';
+interface HeaderProps {
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
+}
 
-export function Header({ theme, toggleTheme }) {
+export function Header({ theme, toggleTheme }: HeaderProps) {
   return (
     <Container>
       <Profile>devFinder</Profile>

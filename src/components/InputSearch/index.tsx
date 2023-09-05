@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import axios from 'axios';
 
 import {
@@ -7,28 +7,31 @@ import {
   Input,
   Button,
   WithoutResults,
-} from './style.js';
+} from './style';
 import { CardDetailsGitHubUser } from '../CardDetailsGitHubUser/index';
 
-export function InputSearch() {
-  const [githubUsername, setGitHubUsername] = useState('');
-  const [githubName, setGitHubName] = useState('');
-  const [githubBio, setGitHubBio] = useState('');
-  const [githubAvatarURL, setGitHubAvatarURL] = useState('');
-  const [githubLocation, setGitHubLocation] = useState('');
-  const [githubURL, setGitHubURL] = useState('');
+interface GitHubUserData {
+  name: string;
+  bio: string;
+  avatar_url: string;
+  location: string;
+  html_url: string;
+}
 
-  function handleSearchGitHubUser(event) {
+export function InputSearch() {
+  const [githubUsername, setGitHubUsername] = useState<string>('');
+  const [githubData, setGitHubData] = useState<GitHubUserData | null>(null);
+
+  async function handleSearchGitHubUser(event: FormEvent) {
     event.preventDefault();
-    axios
-      .get(`https://api.github.com/users/${githubUsername}`)
-      .then((response) => {
-        setGitHubName(response.data.name);
-        setGitHubBio(response.data.bio);
-        setGitHubAvatarURL(response.data.avatar_url);
-        setGitHubLocation(response.data.location);
-        setGitHubURL(response.data.html_url);
-      });
+    try {
+      const { data } = await axios.get<GitHubUserData>(
+        `https://api.github.com/users/${githubUsername}`
+      );
+      setGitHubData(data);
+    } catch (error) {
+      console.error('Erro ao buscar usuário do GitHub:', error);
+    }
   }
 
   return (
@@ -36,7 +39,7 @@ export function InputSearch() {
       <HeaderSearch>
         <Input
           type="text"
-          onChange={(event) => {
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
             setGitHubUsername(event.target.value);
           }}
           placeholder="Digite o username do GitHub"
@@ -45,13 +48,13 @@ export function InputSearch() {
       </HeaderSearch>
 
       <section>
-        {githubName ? (
+        {githubData ? (
           <CardDetailsGitHubUser
-            avatar_url={githubAvatarURL}
-            name={githubName}
-            bio={githubBio}
-            location={githubLocation}
-            url={githubURL}
+            avatar_url={githubData.avatar_url}
+            name={githubData.name}
+            bio={githubData.bio}
+            location={githubData.location}
+            url={githubData.html_url}
           />
         ) : (
           <WithoutResults>Nenhum usuário pesquisado...</WithoutResults>

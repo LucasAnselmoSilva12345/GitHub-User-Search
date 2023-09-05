@@ -1,12 +1,8 @@
 import { Header } from '../../components/Header';
 import { InputSearch } from '../../components/InputSearch';
-import { SectionContainer } from './style.js';
-import { useDarkMode } from '../../styles/DarkMode/useDarkMode.js';
-import {
-  GlobalStyles,
-  lightTheme,
-  darkTheme,
-} from '../../styles/globalStyles.js';
+import { SectionContainer } from './style';
+import { useDarkMode } from '../../styles/DarkMode/useDarkMode';
+import { GlobalStyles, lightTheme, darkTheme } from '../../styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import '../../styles/global.css';
 
