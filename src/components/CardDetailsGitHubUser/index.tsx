@@ -1,4 +1,3 @@
-import React from 'react';
 import { ButtonBlank } from 'lulib-ui';
 
 import {
@@ -9,15 +8,23 @@ import {
   CardDetailsGitHubUserName,
   CardDetailsGitHubUserBio,
   CardDetailsGitHubUserCity,
-} from './style.js';
+} from './style';
+
+interface CardDetailsGitHubUserProps {
+  avatar_url: string;
+  name: string;
+  bio: string;
+  location: string;
+  html_url: string;
+}
 
 export function CardDetailsGitHubUser({
   avatar_url,
   name,
   bio,
   location,
-  url,
-}) {
+  html_url,
+}: CardDetailsGitHubUserProps) {
   return (
     <CardDetailsGitHubUserContainer>
       <div>
@@ -30,7 +37,7 @@ export function CardDetailsGitHubUser({
           <CardDetailsGitHubUserCity>{location}</CardDetailsGitHubUserCity>
         </CardDetailsGitHubUserDetails>
 
-        <ButtonBlank link={url} nameButton="Follow" />
+        <ButtonBlank link={html_url} nameButton="Follow" />
       </CardDetailsGitHubUserDetailsStructure>
     </CardDetailsGitHubUserContainer>
   );

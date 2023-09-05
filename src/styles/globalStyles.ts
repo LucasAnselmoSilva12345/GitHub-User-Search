@@ -1,6 +1,24 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+interface Theme {
+  body: string;
+  text: string;
+  bgHeader: string;
+  colorHeader: string;
+  bgInput: string;
+  focusInput: string;
+  borderColorInput: string;
+  colorPlaceholder: string;
+  bgButtonSearch: string;
+  bgButtonBorder: string;
+  colorWithoutUserSearch: string;
+  colorUsername: string;
+  colorBio: string;
+  colorCity: string;
+  borderBottomColor?: string;
+}
+
+export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   * {
     margin: 0;
     padding: 0;
@@ -33,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export const lightTheme = {
+export const lightTheme: Theme = {
   body: '#fff',
   text: '#363537',
   bgHeader: '#fff',
@@ -51,7 +69,7 @@ export const lightTheme = {
   colorCity: '#333',
 };
 
-export const darkTheme = {
+export const darkTheme: Theme = {
   body: '#171717',
   text: '#fff',
   bgHeader: '#171717',
