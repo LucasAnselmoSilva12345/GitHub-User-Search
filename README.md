@@ -1,23 +1,21 @@
 # GitHub User Search
 
-[Version this Readme in english](https://github.com/LucasAnselmoSilva12345/GitHub-User-Search/blob/main/README-en.md)
+## About this project
 
-## Sobre esse projeto
+Web application responsible for allowing users to search about users present on [GitHub](https://github.com/).
 
-Aplicação web responsável por permitir a pesquisa de usuários presentes no [GitHub](https://github.com/).
+You can search for a specific user and get information about that searched user.
 
-Você consegue pesquisar por um usuário específico e obter informações sobre esse usuário pesquisado.
+## Technologies used in this project
 
-## Tecnologias utilizadas nesse projeto
-
-Nesse projeto, foram utilizadas as seguintes tecnologias:
+In this project, the following technologies were used:
 
 ### Front-end
 
 - [React](https://reactjs.org/)
 - [Styled-components](https://styled-components.com/)
 - [LuLib-UI](https://www.npmjs.com/package/lulib-ui)
-- [Phopshor-Icons-React](https://github.com/phosphor-icons/react)
+- [Phosphor-Icons-React](https://github.com/phosphor-icons/react)
 
 ### Back-end
 
@@ -27,29 +25,29 @@ Nesse projeto, foram utilizadas as seguintes tecnologias:
 
 - [https://gitdevfindersearch.netlify.app/](https://gitdevfindersearch.netlify.app/)
 
-## Como executar esse projeto
+## How to execute this project
 
-**Para executar o site, tenha certeza que você tem o [Git](https://git-scm.com/) instalado em sua máquina**.
+**To run the application, be sure you have [Git](https://git-scm.com/) installed on your machine**.
 
-1. Faça o clone desse repositório através do comando:
-
-```sh
-
-$ git clone https://github.com/LucasAnselmoSilva12345/GitHub-User-Search gitHubUserSearch
-
-```
-
-2. Após realizar o clone do projeto, ainda no terminal, entre na pasta do projeto:
+1. Make clone this repository through the command:
 
 ```sh
 
-$ cd gitHubUserSearch
+$ git clone https://github.com/LucasAnselmoSilva12345/GitHub-User-Search github-user-search
 
 ```
 
-Obs. Para realizar a execução do comando no próximo passo, tenha garantia que tenha o [node](https://nodejs.org/en/) instalado em sua máquina para poder utilizar o `npm`. Ou caso prefira instalar as dependências via `yarn` tenha garantia que tem o [yarn](https://yarnpkg.com/) instalado em sua máquina.
+2. After performing the clone the project, still in the terminal, enter the project folder:
 
-3. Após entrar na pasta do projeto, rode o comando:
+```sh
+
+$ cd github-user-search
+
+```
+
+Note: To perform the command execution in the next step, ensure that you have [node](https://nodejs.org/en/) installed on your machine to be able to use `npm`. Or, if you prefer to install the dependencies via `yarn`, make sure you have [yarn](https://yarnpkg.com/) installed on your machine.
+
+3. After entering the project folder, run the command:
 
 ```sh
 
@@ -61,9 +59,9 @@ $ yarn
 
 ```
 
-Para realizar a instalação de dependências.
+To perform the installation of dependencies.
 
-4. Após instalação das dependências e ainda na pasta do projeto via terminal, rode o comando:
+4. After installing the dependencies and still in the project folder vide terminal, run the command:
 
 ```sh
 
@@ -71,9 +69,9 @@ $ code .
 
 ```
 
-Para abrir o projeto no Visual Studio Code.
+To open the project in the Visual Studio Code.
 
-5. Após abrir o projeto no seu Visual Studio Code, volte para a tela do terminal, e rode o comando:
+5. After opening the project in your Visual Studio Code, go back to the terminal screen, and run the command:
 
 ```sh
 
@@ -85,9 +83,9 @@ yarn dev
 
 ```
 
-Para executar o projeto
+To execute the project
 
-6. Feito isso, basta abrir o projeto no seu navegador, através do link:
+6. Once this is done, just open the project in your browser, through the link:
 
 ```sh
 
